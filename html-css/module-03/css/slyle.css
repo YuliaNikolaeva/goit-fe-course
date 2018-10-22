@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.menu, .menu a, .about-section, .text-section, .button {
+    font-family: 'Playfair Display', serif;
+}
+
+.name-section {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.menu, .menu a, .about-section, .text-section, .name-section {
+    text-align: left;
+}
+
+.menu, .menu a, .about-section, .text-section, .button {
+  color: rgba(98, 98, 98, 255);
+}
+
+.navigation {
+    text-align: center;
+    padding: 78px 0 104px 0;
+}
+
+.menu {
+    display: inline-block;
+}
+
+.menu a {
+text-decoration: none;
+}
+
+.menu a:hover{
+color: rgba(0, 153, 255, 1);
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.menu-item:last-child {
+    margin-right: 0px;
+}
+
+.wrapper {
+    display: inline-block;
+    width: 902px;    
+}
+
+.main-section {
+    font-size: 0;
+    text-align: center;
+}
+
+.block-section {
+    display: inline-block;
+    width: 420px;
+    margin: 0 60px 122px 0;
+}
+
+.block-section:nth-child(even){
+    margin-right: 0;
+}
+
+.block-section:nth-last-child(-n+2){
+    margin-bottom: 0;
+}
+
+.image-section {
+    margin-bottom: 32px;
+}
+
+.name-section {
+    color: rgba(180, 173, 158, 255);
+}
+
+.menu {
+    font-size: 14px;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.name-section {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.about-section {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+
+.text-section {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.button-more {
+    text-align: center;
+    padding: 54px 0 70px 0;
+}
+
+.button {
+    width: 164px;
+    height: 60px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(98, 98, 98, 255);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(192, 191, 199, 1);
+
+}

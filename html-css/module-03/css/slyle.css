@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
 
 .visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
@@ -35,10 +35,13 @@
 .navigation {
     text-align: center;
     padding: 78px 0 104px 0;
-}
+   }
 
 .menu {
     display: inline-block;
+    font-size: 0;
+    text-transform: uppercase;
+    list-style: none;
 }
 
 .menu a {
@@ -52,6 +55,7 @@ color: rgba(0, 153, 255, 1);
 .menu-item {
     display: inline-block;
     margin-right: 100px;
+    font-size: 14px;
 }
 
 .menu-item:last-child {
@@ -88,12 +92,6 @@ color: rgba(0, 153, 255, 1);
 
 .name-section {
     color: rgba(180, 173, 158, 255);
-}
-
-.menu {
-    font-size: 14px;
-    text-transform: uppercase;
-    list-style: none;
 }
 
 .name-section {

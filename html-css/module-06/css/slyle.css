@@ -226,16 +226,13 @@
 
 .item-team {
     width: 383px;
-}
-
-.photo-team {
-    padding-bottom: 30px;
+    font-size: 0;
 }
 
 .name {
     font-size: 14px;
     text-transform: uppercase;
-    padding-bottom: 15px;
+    padding: 31px 0 15px 0;
     text-align: center;
 }
 
@@ -248,6 +245,16 @@
 
 .photo-team {
     position: relative;
+    transition-property: rtansform, box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+    box-shadow: 12px 12px 0 rgba(149, 225, 211, 0);
+}
+
+.photo-team:hover {
+    transform: translate(-12px, -12px);
+    box-shadow: 12px 12px 0 rgba(149, 225, 211, 1)
+
 }
 
 .gradient-team {
@@ -257,16 +264,14 @@
     width: 383px;
     height: 473px;
     background-image: linear-gradient(rgba(243, 129, 129, 0.9),rgba(252, 227, 138, 0.9));
-    box-shadow: 12px 12px 0 rgba(149, 225, 211, 1);
     opacity: 0;
-    transition-property: opacity, rtansform;
+    transition-property: opacity;
     transition-duration: 200ms;
     transition-timing-function: 200ms;
 }
 
 .gradient-team:hover {
     opacity: 1;
-    transform: translate(-12px, -12px);
 }
 
 .box-social {

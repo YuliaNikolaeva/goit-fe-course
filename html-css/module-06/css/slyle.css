@@ -267,7 +267,7 @@
     opacity: 0;
     transition-property: opacity;
     transition-duration: 200ms;
-    transition-timing-function: 200ms;
+    transition-timing-function: linear;
 }
 
 .gradient-team:hover {

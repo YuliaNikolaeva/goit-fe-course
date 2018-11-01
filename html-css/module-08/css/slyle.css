@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-family: 'Montserrat';
+}
+
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Fonts and Colors */
+
+.text-screen,
+.about-partner {
+    font-family: 'Roboto';
+}
+
+/* red */
+.see-partners-button {
+    color: rgba(255, 78, 80, 255);
+}
+
+/* black */
+.lead-box-partner {
+    color: rgba(51, 51, 51, 255);
+}
+
+/* gtay */
+.about-partner {
+    color: rgba(102, 102, 102, 255);
+}
+
+
+/* Navigation  */
+
+header {
+    display: flex;
+    height: 171px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    padding: 21px 0 38px 0;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.box-log-in {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.authorization,
+.registration {
+    color: rgba(255, 255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    height: 36px;
+    width: 90px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.authorization:hover,
+.registration:hover {
+    border: 2px solid rgba(255, 255, 255, 255);
+}
+
+
+
+/* Screen */
+
+.box-screen {
+    width: 320px;
+    height: 542px;
+}
+
+.image-screen {
+    background-image: url(../img/cover/main-cover.png);
+    background-color: rgba(0, 0, 0, 1);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.text-box-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 173px;
+    height: 280px;
+}
+
+.lead-screen {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text-screen {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.button-find-partner {
+    width: 280px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgba(255, 78, 80, 255);
+    cursor: pointer;
+}
+
+/* Partner */
+
+.lead-box-partner {
+    font-size: 22px;
+}
+
+.box-partner {
+    list-style: none;
+    width: 194px;
+}
+
+.photo-partner {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.box-photo-partner {
+    position: relative;
+    width: 122px;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tv {
+    background-image: url(../img/icon/tv.png);
+    background-color: rgba(255, 78, 80, 1);
+}
+
+.colbe {
+    background-image: url(../img/icon/colbe.png);
+    background-color: rgba(255, 165, 7, 1);
+}
+
+.cup {
+    background-image: url(../img/icon/cup.png);
+    background-color: rgba(28, 215, 173, 1);
+}
+
+.fly {
+    background-image: url(../img/icon/fly.png);
+    background-color: rgba(78, 115, 219, 1);
+}
+
+.name-partner {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-partner {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.see-partners-button {
+    width: 280px;
+    height: 40px;
+    border: 2px solid rgba(255, 78, 80, 255);
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* MEDIA */
+

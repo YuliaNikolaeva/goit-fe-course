@@ -40,31 +40,43 @@
 /* black */
 .lead-box-partner {
     color: rgba(51, 51, 51, 255);
+    padding-bottom: 14px;
 }
 
-/* gtay */
+/* gray */
 .about-partner {
     color: rgba(102, 102, 102, 255);
 }
 
+/* white */
 
-/* Navigation  */
+.text-box-screen {
+    color: rgba(255, 255, 255, 1); 
+}
 
-header {
+/* Header  */
+
+.head-section {
+    height: 542px;
+    padding-bottom: 68px;
+}
+
+.wrapper-header {
     display: flex;
-    height: 171px;
     flex-direction: column-reverse;
     justify-content: space-between;
-    text-align: center;
+    height: 171px;
+    padding-top: 33px;
     position: relative;
-    z-index: 3;
-    padding: 21px 0 38px 0;
+    z-index: 2;
 }
 
 .logo {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
+    line-height: 36px;
 }
 
 .logo a {
@@ -95,13 +107,13 @@ header {
     border: 2px solid rgba(255, 255, 255, 255);
 }
 
-
-
 /* Screen */
 
 .box-screen {
-    width: 320px;
     height: 542px;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .image-screen {
@@ -112,47 +124,72 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top: 0;
-    z-index: 2;
 }
 
 .text-box-screen {
+    width: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     height: 173px;
-    height: 280px;
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .lead-screen {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 29px;
     font-weight: 600;
 }
 
 .text-screen {
+    width: 217px;
     font-size: 18px;
     font-weight: 300;
 }
 
-.button-find-partner {
+.button-find-partner,
+.see-partners-button {
     width: 280px;
     height: 40px;
+    border: 2px solid rgba(255, 78, 80, 255);
     border-radius: 30px;
-    background-color: rgba(255, 78, 80, 255);
     cursor: pointer;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 78, 80, 1);
+}
+
+.see-partners-button:hover,
+.button-find-partner:hover {
+    background-color: rgba(255, 78, 80, 255);
+    color: rgba(255, 255, 255, 1);
 }
 
 /* Partner */
 
+.wrapper-partner {
+    text-align: center;
+    padding-bottom: 55px;
+} 
+
 .lead-box-partner {
     font-size: 22px;
+    width: 278px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .box-partner {
     list-style: none;
     width: 194px;
+    padding-bottom: 29px;
+    margin: 0 auto;
 }
 
 .photo-partner {
@@ -162,15 +199,25 @@ header {
     overflow: hidden;
 }
 
+.item-partner {
+    text-align: center;
+}
+
+.item-partner:not(:last-child) {
+    margin-bottom: 26px;
+}
+
 .box-photo-partner {
     position: relative;
     width: 122px;
+    padding-bottom: 20px;
+    margin: 0 auto;
 }
 
 .icon {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 20px;
     width: 30px;
     height: 30px;
     border: 4px solid rgba(255, 255, 255, 1);
@@ -202,6 +249,7 @@ header {
 .name-partner {
     font-size: 14px;
     font-weight: 600;
+    padding-bottom: 16px;
 }
 
 .about-partner {
@@ -209,14 +257,63 @@ header {
     font-weight: 300;
 }
 
-.see-partners-button {
-    width: 280px;
-    height: 40px;
-    border: 2px solid rgba(255, 78, 80, 255);
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: transparent;
+/*--- MEDIA ---*/
+ 
+@media (min-width: 700px) {
+    .head-section {
+        padding-bottom: 72px;
+    }
+
+    .wrapper-header {
+        width: 669px;
+        flex-direction: row;
+        height: auto;
+        padding-top: 38px;
+        margin: 0 auto;
+    }
+
+    .text-box-screen {
+        top: 170px;
+        height: 240px;
+    }
+
+    .text-screen {
+        width: auto;
+    }
+
+    .lead-box-partner {
+        width: auto;
+        padding-bottom: 31px;
+    }
+
+    .box-partner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 458px;
+        height: 493px;
+        padding-bottom: 39px;
+    }
+
+    .item-partner {
+        width: 194px;
+    }
+
+    .item-partner:nth-last-child(2) {
+        margin-bottom: 0;
+    }
 }
 
-/* MEDIA */
+@media (min-width: 1200px) {
+    .wrapper-header {
+        width: 939px;
+        padding-top: 20px;
+    }
 
+    .box-partner {
+        padding-top: 33px;
+        width: 914px;
+        height: auto;
+    }
+
+}

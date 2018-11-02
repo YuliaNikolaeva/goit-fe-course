@@ -299,10 +299,9 @@
         width: 194px;
     }
 
-    .item-partner:nth-last-child(2) {
+    .item-partner:nth-last-child(-n+2) {
         margin-bottom: 0;
     }
-}
 
 @media (min-width: 1200px) {
     .wrapper-header {
@@ -314,6 +313,11 @@
         padding-top: 33px;
         width: 914px;
         height: auto;
+    }
+
+    .item-partner:nth-last-child(-n+4) {
+        margin-bottom: 0;
+
     }
 
 }

@@ -302,6 +302,7 @@
     .item-partner:nth-last-child(-n+2) {
         margin-bottom: 0;
     }
+}
 
 @media (min-width: 1200px) {
     .wrapper-header {
@@ -317,7 +318,5 @@
 
     .item-partner:nth-last-child(-n+4) {
         margin-bottom: 0;
-
     }
-
 }

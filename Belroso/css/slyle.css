@@ -3,6 +3,7 @@
     padding: 0;
     border: 0;
     font-family: 'Roboto', sans-serif ;
+    background-color: pink;
 }
 
 .visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
@@ -41,7 +42,7 @@
     padding-left: 30px;
     position: fixed;
     left: 40px;
-    top: 160px;
+    top: 170px;
 }
 
 .lead-menu {
@@ -73,12 +74,12 @@
     border-radius: 35%;
     overflow: hidden;
     padding-bottom: 5px;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
 }
 
-.menu-item:hover .icon {
+/* .menu-item:hover .icon {
     filter: none;
-}
+} */
 
 .menu-item:hover {
     color: #ffffff;
@@ -198,7 +199,7 @@
     height: 25px;
 }
 
-.yes {
+.yes, .white {
     background-color: #56cad6;
 }
 

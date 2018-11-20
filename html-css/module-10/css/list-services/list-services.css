@@ -1,0 +1,76 @@
+
+.list-services {
+    list-style: none;
+    width: 1142px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+}
+
+.list-services__item {
+    width: 286px;
+    position: relative;
+}
+
+.list-services__item:nth-child(-n+3) {
+    margin-bottom: 100px;
+}
+
+.list-services__name {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: var(--c-gray-dark);
+    -webkit-transform: translate(55px, -36px);
+        -ms-transform: translate(55px, -36px);
+            transform: translate(55px, -36px);
+}
+
+.list-services__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--c-gray-light);
+    line-height: 18px;
+    -webkit-transform: translate(55px, -36px);
+        -ms-transform: translate(55px, -36px);
+            transform: translate(55px, -36px);
+}
+
+.list-services__icon::before {
+    width: 35px;
+    height: 35px;
+    display: block;
+    content: '';
+    background-repeat: no-repeat;
+}
+
+.list-services__clock::before {
+    background-image: url(../../img/icon/icon-clock.svg);
+}
+
+.list-services__graph::before {
+    background-image: url(../../img/icon/icon-graph.svg);
+}
+
+.list-services__pc::before {
+    background-image: url(../../img/icon/icon-pc.svg);
+}
+
+.list-services__boock::before {
+    background-image: url(../../img/icon/icon-boock.svg);
+}
+
+.list-services__home::before {
+    background-image: url(../../img/icon/icon-home.svg);
+}
+
+.list-services__digital::before {
+    background-image: url(../../img/icon/icon-digital.svg);
+}

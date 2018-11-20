@@ -1,0 +1,208 @@
+.team {
+    width: 1213px;
+    margin: auto;
+    padding-bottom: 82px;
+}
+
+.team__about {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: var(--c-gray-light);
+    text-align: center;
+    padding-bottom: 90px; 
+}
+
+.team__box {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.team__item {
+    width: 383px;
+}
+
+.team__item--hover:hover .social {
+    opacity: 1;
+}
+
+.team__photo-gradient {
+    height: 473px;
+    width: 383px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+    transition-property: -webkit-transform, -webkit-box-shadow;
+    -o-transition-property: transform, box-shadow;
+    transition-property: transform, box-shadow;
+    transition-property: transform, box-shadow, -webkit-transform, -webkit-box-shadow;
+    -webkit-box-shadow: 12px 12px 0 var(--c-0-green-light);
+            box-shadow: 12px 12px 0 var(--c-0-green-light);
+}
+
+.team__photo-gradient--hover:hover {
+    -webkit-transform: translate(-12px, -12px);
+        -ms-transform: translate(-12px, -12px);
+            transform: translate(-12px, -12px);
+    -webkit-box-shadow: 12px 12px 0 var(--c-green-light);
+            box-shadow: 12px 12px 0 var(--c-green-light);
+}
+
+.team__position-one {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-0-red-light)), to(var(--c-0-yell))),
+    url(../../img/teem/teem_photo1@1X-min.png);
+    background-image: -webkit-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo1@1X-min.png);
+    background-image: -o-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo1@1X-min.png);
+    background-image: linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo1@1X-min.png);
+}
+
+.team__position-one--hover:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-09-red-light)), to(var(--c-09-yell))),
+    url(../../img/teem/teem_photo1@1X-min.png);
+    background-image: -webkit-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo1@1X-min.png);
+    background-image: -o-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo1@1X-min.png);
+    background-image: linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo1@1X-min.png);
+}
+
+.team__position-two {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-0-red-light)), to(var(--c-0-yell))),
+    url(../../img/teem/teem_photo2@1X-min.png);
+    background-image: -webkit-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo2@1X-min.png);
+    background-image: -o-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo2@1X-min.png);
+    background-image: linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo2@1X-min.png);
+}
+
+.team__position-two--hover:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-09-red-light)), to(var(--c-09-yell))),
+    url(../../img/teem/teem_photo2@1X-min.png);
+    background-image: -webkit-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo2@1X-min.png);
+    background-image: -o-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo2@1X-min.png);
+    background-image: linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo2@1X-min.png);
+}
+
+.team__position-three {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-0-red-light)), to(var(--c-0-yell))),
+    url(../../img/teem/teem_photo3@1X-min.png);
+    background-image: -webkit-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo3@1X-min.png);
+    background-image: -o-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo3@1X-min.png);
+    background-image: linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+    url(../../img/teem/teem_photo3@1X-min.png);
+}
+
+.team__position-three--hover:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-09-red-light)), to(var(--c-09-yell))),
+    url(../../img/teem/teem_photo3@1X-min.png);
+    background-image: -webkit-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo3@1X-min.png);
+    background-image: -o-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo3@1X-min.png);
+    background-image: linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+    url(../../img/teem/teem_photo3@1X-min.png);
+}
+
+.team__name {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--c-gray-dark);
+    padding: 30px 0 15px 0;
+}
+
+.team_profession {
+    font-family: 'Roboto', cursive;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--c-gray-light);
+}
+
+/* MEDIA */
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .team__position-one {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-0-red-light)), to(var(--c-0-yell))),
+        url(../../img/teem/teem_photo1@2X-min.png);
+        background-image: -webkit-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo1@2X-min.png);
+        background-image: -o-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo1@2X-min.png);
+        background-image: linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo1@2X-min.png);
+    }
+    
+    .team__position-one--hover:hover {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-09-red-light)), to(var(--c-09-yell))),
+        url(../../img/teem/teem_photo1@2X-min.png);
+        background-image: -webkit-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo1@2X-min.png);
+        background-image: -o-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo1@2X-min.png);
+        background-image: linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo1@2X-min.png);
+    }
+
+    .team__position-two {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-0-red-light)), to(var(--c-0-yell))),
+        url(../../img/teem/teem_photo2@2X-min.png);
+        background-image: -webkit-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo2@2X-min.png);
+        background-image: -o-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo2@2X-min.png);
+        background-image: linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo2@2X-min.png);
+    }
+    
+    .team__position-two--hover {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-09-red-light)), to(var(--c-09-yell))),
+        url(../../img/teem/teem_photo2@2X-min.png);
+        background-image: -webkit-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo2@2X-min.png);
+        background-image: -o-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo2@2X-min.png);
+        background-image: linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo2@2X-min.png);
+    }
+    
+    .team__position-three {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-0-red-light)), to(var(--c-0-yell))),
+        url(../../img/teem/teem_photo3@2X-min.png);
+        background-image: -webkit-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo3@2X-min.png);
+        background-image: -o-linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo3@2X-min.png);
+        background-image: linear-gradient(var(--c-0-red-light), var(--c-0-yell)),
+        url(../../img/teem/teem_photo3@2X-min.png);
+    }
+    
+    .team__position-three--hover {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-09-red-light)), to(var(--c-09-yell))),
+        url(../../img/teem/teem_photo3@2X-min.png);
+        background-image: -webkit-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo3@2X-min.png);
+        background-image: -o-linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo3@2X-min.png);
+        background-image: linear-gradient(var(--c-09-red-light), var(--c-09-yell)),
+        url(../../img/teem/teem_photo3@2X-min.png);
+    }
+}
+

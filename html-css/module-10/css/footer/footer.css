@@ -1,0 +1,51 @@
+.footer {
+    padding: 24px 0;
+    border-top: 1px solid var(--c-gray-light);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1198px;
+    margin: auto;
+}
+
+.footer__copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 40px;
+    color: var(---c-gray-dark);
+}
+
+.footer__name {
+    color: var(--c-red);
+}
+
+.footer__form {
+    font-size: 0;
+}
+
+.footer__input {
+    font-family: 'Montserrat', sans-serif;
+    width: 217px;
+    height: 38px;
+    border: 1px solid var(--c-08-gray-light);
+    font-size: 15px;
+    font-style: italic;
+    background-color: var(--c-white);
+    padding-left: 13px;
+}
+
+.footer__button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: var(--c-green-light);
+    text-transform: uppercase;
+    color: var(--c-white);
+    cursor: pointer;
+}

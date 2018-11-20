@@ -1,0 +1,14 @@
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logo__big-letter {
+    text-transform: uppercase;
+}
+
+.logo__link {
+    text-decoration: none;
+    color: var(--c-white);
+}

@@ -1,0 +1,60 @@
+
+.banner {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-08-red-light)), to(var(--c-yell))),
+    url(../../img/banner/banner@1X.png);
+    background-image: -webkit-linear-gradient(var(--c-08-red-light), var(--c-yell)),
+    url(../../img/banner/banner@1X.png);
+    background-image: -o-linear-gradient(var(--c-08-red-light), var(--c-yell)),
+    url(../../img/banner/banner@1X.png);
+    background-image: linear-gradient(var(--c-08-red-light), var(--c-yell)),
+    url(../../img/banner/banner@1X.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 1000px;
+    text-align: center;
+    padding-bottom: 232px;
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .banner {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--c-08-red-light)), to(var(--c-yell))),
+        url(../../img/banner/banner@2X.png);
+        background-image: -webkit-linear-gradient(var(--c-08-red-light), var(--c-yell)),
+        url(../../img/banner/banner@2X.png);
+        background-image: -o-linear-gradient(var(--c-08-red-light), var(--c-yell)),
+        url(../../img/banner/banner@2X.png);
+        background-image: linear-gradient(var(--c-08-red-light), var(--c-yell)),
+        url(../../img/banner/banner@2X.png);
+    }
+}
+
+.banner__lead {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    color: var(--c-white);
+    padding-bottom: 42px;
+}
+
+.banner__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150px;
+    font-weight: 700;
+    color: var(--c-white);
+    padding-bottom: 124px;
+}
+
+.banner__button {
+    width: 160px;
+    height: 40px;
+    background-color: transparent;
+    border: 3px solid var(--c-white);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--c-white); 
+    cursor: pointer;
+}

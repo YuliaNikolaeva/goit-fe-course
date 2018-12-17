@@ -1,38 +1,27 @@
 'use strict';
 
-
 const adminLogin = 'admin';
 const adminPassword = 'm4ngo1zh4ackz0r';
-
-const loginInput = prompt('Пожалуйста, укажите логин');
-const passwordInput = prompt('Пожалуйста, укажите пароль');
-
+const loginInput = 'Пожалуйста, укажите логин';
+const passInput = 'Пожалуйста, укажите пароль';
 const messageCancelUser = 'Отменено пользователем!';
 const messageWrongLogin = 'Доступ запрещен, неверный логин';
-const messageCancel = 'Не тот пароль';
-const messegeWrongLogin = 'Доступ запрещен, неверный логин!';
-const messegeWrongPassword = 'Доступ запрещен, неверный пароль!';
-const messegeWellcom = 'Добро пожаловать!';
+const messаgeWrongPassword = 'Доступ запрещен, неверный пароль!';
+const messageWelcome = 'Добро пожаловать!';
 
-
-const cancelLogin = loginInput === null;
-const notCorrectLogin = loginInput !== adminLogin;
-const correctLogin = loginInput === adminLogin;
-
-const cancelPassword = passwordInput === null;
-const notCorrectPassword = passwordInput !== adminPassword;
-const correctPassword = passwordInput === adminPassword;
-
-if (cancelLogin) {
-    (messageCancelUser);
-} else if (notCorrectLogin) {
-    alert(messageWrongLogin);
-} else if(correctLogin) {
-    (passwordInput);
-} else if (cancelPassword) {
+const enterLoginInput = prompt(loginInput);
+if (enterLoginInput === adminLogin) {
+ const enterPassInput = prompt(passInput); {
+    if (enterPassInput === adminPassword) {
+      alert(messageWelcome);
+    } else if (enterPassInput === null) {
+      alert(messageCancelUser);
+    } else {
+      alert(messаgeWrongPassword);
+    }
+}
+} else if (enterLoginInput === null) {
     alert(messageCancelUser);
-} else if (notCorrectPassword) {
-    alert(notCorrectPassword);
-} else if (correctPassword) {
-    alert(messegeWellcom);
+} else {
+    alert(messageWrongLogin);
 }

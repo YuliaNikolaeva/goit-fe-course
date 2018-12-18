@@ -21,7 +21,7 @@ const messUserGo = 'Приятного путешествия в группе ';
 const messNoPlaces = 'Извините, столько мест нет ни в одной группе';
 
 const enterPlaces = Number(prompt(selectionPlaces));
-if (enterPlaces !== NaN && enterPlaces > 0) {
+if (enterPlaces !== NaN && enterPlaces > 0 && Number.isInteger(enterPlaces)) {
   if (enterPlaces <= openTaba) {
     const YouGoTour1 = confirm(messOupenGroup + tour1 + messYouLikeIt);
    if (YouGoTour1) {
@@ -50,6 +50,7 @@ if (enterPlaces !== NaN && enterPlaces > 0) {
   } 
 } else if (enterPlaces === 0) {
   alert(messCancel);
+
 } else {
   alert(messInputError);
 }

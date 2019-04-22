@@ -24,41 +24,41 @@
 // PS: используй switch
 
 
-const countryChina = 'китай';
-const countrySouthAmerica = 'южная америка';
-const countryAustralia = 'австралия';
-const countryIndia = 'индия';
-const countryJamaica = 'ямайка';
-
 const priceChina = 100;
 const priceSouthAmerica = 250;
 const priceAustralia = 170;
 const priceIndia = 80;
 const priceJamaica = 120;
 
-const countryDelivery = prompt('В какую страну доставка?').toLowerCase();
+const countryDelivery = prompt('В какую страну доставка?', '');
 
-switch (countryDelivery) {
-    case countryChina:
-    alert(`Доставка в ${countryChina} будет стоить ${priceChina} кредитов`);
-    break;
+if (countryDelivery === null) {
+    console.log('Очень жаль. Обращайтесь к нам еще');
+} else if (countryDelivery === '') {
+    console.log('Ошибка ввода. Не указана страна доставки');
+} else {
+    switch (countryDelivery.toLowerCase()) {
+        case 'китай':
+        console.log(`Доставка в ${countryDelivery} будет стоить ${priceChina} кредитов`);
+        break;
 
-    case countrySouthAmerica:
-    alert(`Доставка в ${countrySouthAmerica} будет стоить ${priceSouthAmerica} кредитов`);
-    break;
+        case 'южная америка':
+        console.log(`Доставка в ${countryDelivery} будет стоить ${priceSouthAmerica} кредитов`);
+        break;
 
-    case countryAustralia:
-    alert(`Доставка в ${countryAustralia} будет стоить ${priceAustralia} кредитов`);
-    break;
+        case 'австралия':
+        console.log(`Доставка в ${countryDelivery} будет стоить ${priceAustralia} кредитов`);
+        break;
 
-    case countryIndia:
-    alert(`Доставка в ${countryIndia} будет стоить ${priceIndia} кредитов`);
-    break;
+        case 'индия':
+        console.log(`Доставка в ${countryDelivery} будет стоить ${priceIndia} кредитов`);
+        break;
 
-    case countryJamaica:
-    alert(`Доставка в ${countryJamaica} будет стоить ${priceJamaica} кредитов`);
-    break;
+        case 'ямайка':
+        console.log(`Доставка в ${countryDelivery} будет стоить ${priceJamaica} кредитов`);
+        break;
 
-    default: 
-    alert(`В стране ${countryDelivery} доставка не доступна`);
+        default: 
+        console.log(`В стране ${countryDelivery} доставка не доступна`);
+    }
 }

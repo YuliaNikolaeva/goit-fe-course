@@ -21,11 +21,13 @@ let message;
 const inputPass = prompt('Введите пароль');
 
 if (inputPass === ADMIN_PASSWORD) {
-  message = alert('Добро пожаловать!');
+  message = 'Добро пожаловать!';
 
 } else if (inputPass === null) {
-  message = alert('Отменено пользователем!');
+  message = 'Отменено пользователем!';
  
 } else {
-  message = alert('Доступ запрещен, неверный пароль!');
+  message = 'Доступ запрещен, неверный пароль!';
 }
+
+alert(message);

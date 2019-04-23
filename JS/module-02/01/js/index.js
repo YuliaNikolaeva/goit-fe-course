@@ -30,19 +30,26 @@ let total = 0;
 
 do {
     input = prompt('Введите число');
-
-    if (input) {
-        let inputToNumber = Number(input);
-        if (!Number.isNaN(inputToNumber)) {
-            numbers.push(inputToNumber);
-         } else {
-            alert ('Было введено не число, попробуйте еще раз');
+    if (input !== null) {
+        if (input.trim().length === 0) {
+            alert('Вы ничего не ввели, попробуйте еще раз');
+        } else {
+            let inputToNumber = Number(input);
+            if (!Number.isNaN(inputToNumber)) {
+                numbers.push(inputToNumber);
+            } else {
+                alert ('Было введено не число, попробуйте еще раз');
+            }
         }
     }
+
 } while (input !== null) ;
 
-for (let item of numbers) {
-    total += item;
+if (numbers.length > 0) {
+    for (let item of numbers) {
+        total += item;
+    }
+    alert (`Общая сумма чисел равна ${total}`);
+} else {
+    alert ('Вы не ввели ни единого числа');
 }
-
-alert (`Общая сумма чисел равна ${total}`);

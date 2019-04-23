@@ -36,11 +36,11 @@ do {
     } else if (passwords.includes(inputPass)) {
       alert('Добро пожаловать!');
       break;
-    } else if (attemptsLeft !== 0) {
+    } else if (attemptsLeft) {
       alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
     } else {
       alert('У вас закончились попытки, аккаунт заблокирован!');
     }
   
-} while (attemptsLeft !==0);
+} while (attemptsLeft);
   

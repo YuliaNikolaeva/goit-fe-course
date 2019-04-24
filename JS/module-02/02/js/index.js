@@ -33,10 +33,10 @@ do {
   
     if (inputPass === null) {
       break;
-    } else if (passwords.includes(inputPass)) {
+    } if (passwords.includes(inputPass)) {
       alert('Добро пожаловать!');
       break;
-    } else if (attemptsLeft) {
+    } if (attemptsLeft) {
       alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
     } else {
       alert('У вас закончились попытки, аккаунт заблокирован!');

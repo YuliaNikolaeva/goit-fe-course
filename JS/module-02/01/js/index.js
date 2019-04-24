@@ -31,7 +31,7 @@ let total = 0;
 do {
     input = prompt('Введите число');
     if (input !== null) {
-        if (input.trim().length === 0) {
+        if (input.trim() === '') {
             alert('Вы ничего не ввели, попробуйте еще раз');
         } else {
             let inputToNumber = Number(input);
@@ -45,7 +45,7 @@ do {
 
 } while (input !== null) ;
 
-if (numbers.length > 0) {
+if (numbers.length) {
     for (let item of numbers) {
         total += item;
     }

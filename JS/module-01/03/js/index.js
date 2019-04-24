@@ -34,7 +34,7 @@ const countryDelivery = prompt('В какую страну доставка?', '
 
 if (countryDelivery === null) {
     console.log('Очень жаль. Обращайтесь к нам еще');
-} else if (countryDelivery === '') {
+} else if (countryDelivery.trim() === '') {
     console.log('Ошибка ввода. Не указана страна доставки');
 } else {
     switch (countryDelivery.toLowerCase()) {

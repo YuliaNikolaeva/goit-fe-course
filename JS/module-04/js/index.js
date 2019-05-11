@@ -10,12 +10,12 @@ const notepad = {
     notes: [],
 
     getNotes() {
-        return notepad.notes;
+        return this.notes;
     },
 
     findNoteById(id) {
-        for (let i = 0; i < notepad.notes.length; i += 1) {
-            const noteObj = notepad.notes[i];
+        for (let i = 0; i < this.notes.length; i += 1) {
+            const noteObj = this.notes[i];
 
             if (noteObj.id === id) {
                 return noteObj;
@@ -24,24 +24,24 @@ const notepad = {
     },
 
     saveNote(note) {
-    notepad.notes.push(note);
-    const lastNote = notepad.notes[notepad.notes.length - 1];
+    this.notes.push(note);
+    const lastNote = this.notes[this.notes.length - 1];
     return lastNote;
     },
 
     deleteNote(id) {
-    for (let i = 0; i < notepad.notes.length; i += 1) {
-        const noteObj = notepad.notes[i];
+    for (let i = 0; i < this.notes.length; i += 1) {
+        const noteObj = this.notes[i];
 
         if (noteObj.id === id) {
-            notepad.notes.splice(notepad.notes.indexOf(noteObj), 1);
+            this.notes.splice(this.notes.indexOf(noteObj), 1);
         };
     };
     },
 
     updateNoteContent(id, updatedContent) {
-        for (let i = 0; i < notepad.notes.length; i += 1) {
-            const noteObj = notepad.notes[i];
+        for (let i = 0; i < this.notes.length; i += 1) {
+            const noteObj = this.notes[i];
 
             if (noteObj.id === id) {
             Object.assign(noteObj, updatedContent);
@@ -52,8 +52,8 @@ const notepad = {
     },
 
     updateNotePriority(id, priority) {
-    for (let i = 0; i < notepad.notes.length; i += 1) {
-        const noteObj = notepad.notes[i];
+    for (let i = 0; i < this.notes.length; i += 1) {
+        const noteObj = this.notes[i];
 
         if (noteObj.id === id) {
             noteObj.priority = priority;
@@ -66,8 +66,8 @@ const notepad = {
     filterNotesByQuery(query) {
     const arrNotesByQuery = [];
 
-    for (let i = 0; i < notepad.notes.length; i += 1) {
-        const noteObj = notepad.notes[i];
+    for (let i = 0; i < this.notes.length; i += 1) {
+        const noteObj = this.notes[i];
         const valuesOfFilter = Object.values(noteObj);
 
         if(valuesOfFilter[1].toLowerCase().includes(query.toLowerCase()) || valuesOfFilter[2].toLowerCase().includes(query.toLowerCase())) {
@@ -81,8 +81,8 @@ const notepad = {
     filterNotesByPriority(priority) {
     const arrNotesByPriority = [];
 
-    for (let i = 0; i < notepad.notes.length; i += 1) {
-        const noteObj = notepad.notes[i];
+    for (let i = 0; i < this.notes.length; i += 1) {
+        const noteObj = this.notes[i];
 
         if(noteObj.priority === priority) {
             arrNotesByPriority.push(noteObj)

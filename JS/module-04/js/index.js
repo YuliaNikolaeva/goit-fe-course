@@ -14,8 +14,7 @@ const notepad = {
     },
 
     findNoteById(id) {
-        for (let i = 0; i < this.notes.length; i += 1) {
-            const noteObj = this.notes[i];
+        for (const noteObj of this.notes) {
 
             if (noteObj.id === id) {
                 return noteObj;
@@ -24,65 +23,51 @@ const notepad = {
     },
 
     saveNote(note) {
-    this.notes.push(note);
-    const lastNote = this.notes[this.notes.length - 1];
-    return lastNote;
+        this.notes.push(note);
+        return note;
     },
 
     deleteNote(id) {
-    for (let i = 0; i < this.notes.length; i += 1) {
-        const noteObj = this.notes[i];
-
-        if (noteObj.id === id) {
-            this.notes.splice(this.notes.indexOf(noteObj), 1);
+        if (this.findNoteById(id)) {
+            this.notes.splice(this.notes.indexOf(this.findNoteById(id)), 1);
+            
         };
-    };
     },
 
     updateNoteContent(id, updatedContent) {
-        for (let i = 0; i < this.notes.length; i += 1) {
-            const noteObj = this.notes[i];
-
-            if (noteObj.id === id) {
-            Object.assign(noteObj, updatedContent);
-
-            return noteObj;
-            };
+            if (this.findNoteById(id)) {
+            Object.assign(this.findNoteById(id), updatedContent);
+           
+            return this.findNoteById(id);
         };
     },
 
     updateNotePriority(id, priority) {
-    for (let i = 0; i < this.notes.length; i += 1) {
-        const noteObj = this.notes[i];
+        if (this.findNoteById(id)) {
+            this.findNoteById(id).priority = priority;
 
-        if (noteObj.id === id) {
-            noteObj.priority = priority;
-
-            return noteObj;
+            return this.findNoteById(id);
         };
-    };
     },
 
     filterNotesByQuery(query) {
     const arrNotesByQuery = [];
 
-    for (let i = 0; i < this.notes.length; i += 1) {
-        const noteObj = this.notes[i];
+    for (const noteObj of this.notes) {
         const valuesOfFilter = Object.values(noteObj);
 
         if(valuesOfFilter[1].toLowerCase().includes(query.toLowerCase()) || valuesOfFilter[2].toLowerCase().includes(query.toLowerCase())) {
-        arrNotesByQuery.push(noteObj);
+            arrNotesByQuery.push(noteObj);
+            };
         };
-    };
 
-    return arrNotesByQuery;
+        return arrNotesByQuery;
     },
 
     filterNotesByPriority(priority) {
     const arrNotesByPriority = [];
 
-    for (let i = 0; i < this.notes.length; i += 1) {
-        const noteObj = this.notes[i];
+    for (const noteObj of this.notes) {
 
         if(noteObj.priority === priority) {
             arrNotesByPriority.push(noteObj)
@@ -91,19 +76,19 @@ const notepad = {
 
     return arrNotesByPriority;
     },
-};
+}; 
 
 
 
 // Добавляю 4 заметки и смотрю что получилось
 notepad.saveNote({
-    id: 'id-1',
-    title: 'JavaScript essentials',
-    body:
-      'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc',
-    priority: Priority.HIGH,
-  });
-  
+id: 'id-1',
+title: 'JavaScript essentials',
+body:
+    'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc',
+priority: Priority.HIGH,
+});
+
 notepad.saveNote({
 id: 'id-2',
 title: 'Refresh HTML and CSS',
@@ -111,7 +96,7 @@ body:
     'Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.',
 priority: Priority.NORMAL,
 });
-  
+
 notepad.saveNote({
 id: 'id-3',
 title: 'Get comfy with Frontend frameworks',
@@ -184,6 +169,7 @@ console.log(
 'Заметки после обновления контента заметки с id-3: ',
 notepad.getNotes(),
 );
+
 
 
 //Повторил HTML и CSS, удаляю запись c id-2

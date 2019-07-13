@@ -203,3 +203,16 @@ const getUniqueSkills = users => {
   };
   
   console.log(getUniqueSkills(users));
+
+
+
+// Массив имен (поле name) людей, отсортированных в зависимости от 
+// количества их друзей (поле friends)
+
+const getNamesSortedByFriendsCount = users => {
+  const copyUser = users.sort((userA, userB) => 
+  userA.friends.length - userB.friends.length).map(user => user.name);
+  return copyUser;
+};
+
+console.log(getNamesSortedByFriendsCount(users));

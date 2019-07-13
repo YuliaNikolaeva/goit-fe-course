@@ -177,3 +177,29 @@ const getUsersByFriend = (users, name) => {
 
 console.log(getUsersByFriend(users, 'Briana Decker'));
 console.log(getUsersByFriend(users, 'Goldie Gentry'));
+
+
+
+
+// 3. Дополнительное задание
+// Получить массив всех умений всех пользователей (поле skills), 
+// при этом не должно быть повторяющихся умений и они должны быть 
+// отсортированы в алфавитном порядке
+
+const getUniqueSkills = users => {
+  const arrSkills = users.reduce((arr, user) => {
+    arr.push(...user.skills)
+    return arr;
+  }, [])
+  
+  const uniqueSkills = arrSkills.reduce((arrUnique, skill) => {
+    if (!arrUnique.includes(skill)) {
+      arrUnique.push(skill)
+    }
+    return arrUnique;
+  }, []);
+  
+  return uniqueSkills.sort();
+  };
+  
+  console.log(getUniqueSkills(users));

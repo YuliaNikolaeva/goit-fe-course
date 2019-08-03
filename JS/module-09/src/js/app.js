@@ -105,12 +105,19 @@ class Notepad {
 
 const notepad = new Notepad(initialNotes);
 
-
+//--------- HENDLERS ---------
 
 const ref = {
-  ul: document.querySelector('.note-list'),
+  form: document.querySelector('.note-editor'),
+  formInputTitle: document.querySelector('input.note-editor__input'),
+  formInputBody: document.querySelector('textarea.note-editor__input'),
+  search: document.querySelector('.search-form'),
+  list: document.querySelector('.note-list'),
+  listItem: document.querySelector('.note-list__item'),
+ 
 }
 
+//--------- UI ---------
 
 // Создает элемент
 const createElement = (tag, className) => {
@@ -203,7 +210,7 @@ const createListItem = (note) => {
   const noteContent = createElement('div', 'note');
 
   listItem.dataset.id = note.id;
-
+ 
   noteContent.append(createNoteContent(note), createNoteFooter(note));
   listItem.append(noteContent);
 
@@ -211,10 +218,68 @@ const createListItem = (note) => {
 };
 
 
-// Перебирает массив записей, добавляет элементы в <ul>
+// Добавляет элементы в <ul>
 const renderNoteList = (listRef, notes) => {
-  const renderList = notes.map(note => createListItem(note));
-  listRef.append(...renderList);
+  if (Array.isArray(notes)) {
+    const renderList = notes.map(note => createListItem(note));
+    listRef.append(...renderList);
+  } else {
+    listRef.append(createListItem(notes));
+  };
 };
 
-renderNoteList(ref.ul, initialNotes);
+renderNoteList(ref.list, initialNotes);
+
+
+//--------- HENDLERS ---------
+
+// Проверяет поля формы,
+// добавляет новую запись в массив заметок,
+// отправляет заметку на рендеринг
+const onSubmitAddNote = (event) => {
+  event.preventDefault();
+
+  const invalidFieldsForm = 
+  ref.formInputTitle.value.trim().length === 0 ||
+  ref.formInputBody.value.trim().length === 0;
+
+  if(invalidFieldsForm) {
+    alert('Пожалуйста, заполните все поля формы');
+  } else {
+    const newNote = {
+      id: Notepad.generateUniqueId(),
+      title: ref.formInputTitle.value,
+      body: ref.formInputBody.value,
+      priority: PRIORITY_TYPES.LOW,
+    };
+
+    notepad.saveNote(newNote);
+
+    renderNoteList(ref.list, newNote);
+
+    ref.form.reset();
+  };
+};
+
+
+// Удаляет запись
+const onPressButtonDeleteNote = () => {
+
+  if(event.target.textContent !== 'delete') return;
+
+  notepad.deleteNote(event.target.closest('.note-list__item').dataset.id);
+  event.target.closest('.note-list__item').remove();
+};
+
+// Ищет по заголовку и телу записи
+const onSearching = ({target}) => {
+  ref.list.innerHTML = '';
+  renderNoteList(ref.list, notepad.filterNotesByQuery(target.value));
+};
+
+
+//--------- EVENTS ---------
+
+ref.form.addEventListener('submit', onSubmitAddNote);
+ref.list.addEventListener('click', onPressButtonDeleteNote);
+ref.search.addEventListener('input', onSearching);

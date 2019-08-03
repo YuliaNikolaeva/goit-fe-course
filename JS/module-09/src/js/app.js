@@ -105,7 +105,7 @@ class Notepad {
 
 const notepad = new Notepad(initialNotes);
 
-//--------- HENDLERS ---------
+//--------- REFERENTS ---------
 
 const ref = {
   form: document.querySelector('.note-editor'),

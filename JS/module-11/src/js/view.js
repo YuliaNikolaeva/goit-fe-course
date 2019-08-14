@@ -7,27 +7,31 @@ import cardTemplate from '../templates/card.hbs';
 const notepad = new Notepad(initialNotes);
 
 const priorityText = (obj) => {
-    switch (obj.priority) {
-    case 0:
-      obj.priority = 'Low';
+    switch (true) {
+    case obj.priority === 0 || obj.priority === 'Low':
+    obj.priority = 'Low';
     break;
 
-    case 1:
+    case obj.priority === 1 || obj.priority === 'Normal':
       obj.priority = 'Normal';
     break;
 
-    case 2:
+    case obj.priority === 2 || obj.priority === 'Hight':
       obj.priority = 'Hight';
     break;
 
     default:
       obj.priority = 'Unknown';
   }
+  
 }
 
 const createItemTemplate = (list, cards) => {
   if (Array.isArray(cards)) {
   cards.map(card => priorityText(card));
+  
+  cards.map(card => console.log(typeof card.priority));
+
 
   list.insertAdjacentHTML('beforeend',
   cards.map(card => cardTemplate(card)).join(''));

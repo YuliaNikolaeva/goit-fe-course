@@ -4,7 +4,7 @@ import 'notyf/notyf.min.css';
 
 import ref from './ref';
 import {PRIORITY_TYPES, NOTIFICATION_MESSAGES} from '../js/utils/constants';
-import {createItemTemplate, notepad} from '../js/view';
+import {createItemTemplate, notepad, priorityText} from '../js/view';
 
 
 const shortid = require('shortid');
@@ -61,7 +61,9 @@ const onPressButtonDeleteNote = () => {
 // Ищет по заголовку и телу записи
 const onSearching = ({target}) => {
   ref.list.innerHTML = '';
-  return createItemTemplate(ref.list, notepad.filterNotesByQuery(target.value)); 
+  
+  createItemTemplate(ref.list, notepad.filterNotesByQuery(target.value)); 
+  
 };
 
 

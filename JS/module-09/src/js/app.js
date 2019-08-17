@@ -84,8 +84,11 @@ class Notepad {
   };
 
   updateNoteContent(id, updatedContent) {
-    return Object.assign(this.findNoteById(id), updatedContent); 
-  };
+    if(this.findNoteById(id)) {
+        return this._notes[this._notes.indexOf(this.findNoteById(id))] = 
+        {...this.findNoteById(id),...updatedContent};
+    };
+};
 
   updateNotePriority(id, priority) {
     return this.findNoteById(id).priority = priority;

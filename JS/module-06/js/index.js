@@ -38,9 +38,9 @@ class Notepad {
     };
 
     updateNoteContent(id, updatedContent) {
-        if (this.findNoteById(id)) {
-            Object.assign(this.findNoteById(id), updatedContent);
-            return this.findNoteById(id);
+        if(this.findNoteById(id)) {
+            return this._notes[this._notes.indexOf(this.findNoteById(id))] = 
+            {...this.findNoteById(id),...updatedContent};
         };
     };
 
@@ -55,8 +55,8 @@ class Notepad {
         const arrNotesByQuery = [];
 
         for (const note of this._notes) {
-            const valuesOfFilter = Object.values(note);
-            if (valuesOfFilter[1].toLowerCase().includes(query.toLowerCase()) || valuesOfFilter[2].toLowerCase().includes(query.toLowerCase())) {
+            if (note.title.toLowerCase().includes(query.toLowerCase()) 
+            || note.body.toLowerCase().includes(query.toLowerCase())) {
                 arrNotesByQuery.push(note);
             };
         };
@@ -82,7 +82,6 @@ Notepad.Priority = {
 };
 
 
-
 const initialNotes = [
     {
       id: 'id-1',
@@ -101,7 +100,6 @@ const initialNotes = [
   ];
   
 const notepad = new Notepad(initialNotes);
-console.log('Все текущие заметки: ', notepad.notes);
 
 
 notepad.saveNote({
@@ -119,7 +117,7 @@ notepad.saveNote({
       "Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park.",
     priority: Notepad.Priority.LOW,
   });
-  
+
 console.log('Все текущие заметки: ', notepad.notes);
 
 

@@ -80,9 +80,9 @@ class Notepad {
   };
 
   updateNoteContent(id, updatedContent) {
-    if (this.findNoteById(id)) {
-      Object.assign(this.findNoteById(id), updatedContent);
-      return this.findNoteById(id);
+    if(this.findNoteById(id)) {
+        return this._notes[this._notes.indexOf(this.findNoteById(id))] = 
+        {...this.findNoteById(id),...updatedContent};
     };
   };
 
@@ -97,13 +97,13 @@ class Notepad {
     const arrNotesByQuery = [];
 
     for (const note of this._notes) {
-      const valuesOfFilter = Object.values(note);
-      if (valuesOfFilter[1].toLowerCase().includes(query.toLowerCase()) || valuesOfFilter[2].toLowerCase().includes(query.toLowerCase())) {
-        arrNotesByQuery.push(note);
-      };
+        if (note.title.toLowerCase().includes(query.toLowerCase()) 
+        || note.body.toLowerCase().includes(query.toLowerCase())) {
+            arrNotesByQuery.push(note);
+        };
     };
-      return arrNotesByQuery;
-  };
+    return arrNotesByQuery;
+};
 
   filterNotesByPriority(priority) {
     const arrNotesByPriority = [];

@@ -1,10 +1,7 @@
 import ref from './ref';
 import initialNotes from '../assets/notes.json';
-// import Notepad from './notepad-model';
 import cardTemplate from '../templates/card.hbs';
 
-
-// const notepad = new Notepad(initialNotes);
 
 const priorityText = (obj) => {
   switch (obj.priority) {

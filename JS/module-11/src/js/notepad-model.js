@@ -1,5 +1,5 @@
 export default class Notepad {
-  constructor (notes) {
+  constructor (notes = []) {
     this._notes = notes;
   }
 
@@ -16,7 +16,9 @@ export default class Notepad {
   };
 
   deleteNote(id) {
-    return this._notes.filter(note => note.id !== id);
+    const noteDelete = this._notes.splice(this.findNoteById(id), 1);
+    // Сохранила в переменную, если в будущем удаленную заметку
+    // нужно будет использовать
   };
 
   updateNoteContent(id, updatedContent) {

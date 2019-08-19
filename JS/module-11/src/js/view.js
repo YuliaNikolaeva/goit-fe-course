@@ -1,10 +1,10 @@
 import ref from './ref';
 import initialNotes from '../assets/notes.json';
-import Notepad from './notepad-model';
+// import Notepad from './notepad-model';
 import cardTemplate from '../templates/card.hbs';
 
 
-const notepad = new Notepad(initialNotes);
+// const notepad = new Notepad(initialNotes);
 
 const priorityText = (obj) => {
   switch (obj.priority) {
@@ -42,4 +42,4 @@ const createItemTemplate = (list, cards) => {
 createItemTemplate(ref.list, initialNotes);
 
 
-export {createItemTemplate, notepad};
+export {createItemTemplate};

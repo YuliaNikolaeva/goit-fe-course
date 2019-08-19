@@ -4,7 +4,9 @@ import 'notyf/notyf.min.css';
 
 import ref from './ref';
 import {PRIORITY_TYPES, NOTIFICATION_MESSAGES} from '../js/utils/constants';
-import {createItemTemplate, notepad, priorityText} from '../js/view';
+import {createItemTemplate} from '../js/view';
+import Notepad from './notepad-model';
+import initialNotes from '../assets/notes.json';
 
 
 const shortid = require('shortid');
@@ -16,9 +18,10 @@ const showForm = () => {
 };
 
 
+const notepad = new Notepad(initialNotes);
+
 
 // Проверяет поля формы, добавляет новую запись 
-
 const onSubmitAddNote = (event) => {
   event.preventDefault();
 

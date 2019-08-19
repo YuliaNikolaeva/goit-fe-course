@@ -1,11 +1,5 @@
-import ref from './ref';
 import {ICON_TYPES, NOTE_ACTIONS} from '../js/utils/constants';
-import initialNotes from '../assets/notes.json';
-import Notepad from './notepad-model';
 
-
-
-const notepad = new Notepad(initialNotes);
 
 // Создает элемент
 const createElement = (tag, className) => {
@@ -116,6 +110,5 @@ const renderNoteList = (listRef, notes) => {
   };
 };
 
-renderNoteList(ref.list, initialNotes);
 
-export {notepad, renderNoteList};
+export {renderNoteList};

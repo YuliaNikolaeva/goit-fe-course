@@ -1,8 +1,14 @@
-import {notepad, renderNoteList} from './view';
+import {renderNoteList} from './view';
 import ref from './ref';
 import {PRIORITY_TYPES} from '../js/utils/constants';
+import Notepad from './notepad-model';
+import initialNotes from '../assets/notes.json';
 
 const shortid = require('shortid');
+
+const notepad = new Notepad(initialNotes);
+
+renderNoteList(ref.list, initialNotes);
 
 
 // Проверяет поля формы,

@@ -24,41 +24,61 @@
 // PS: используй switch
 
 
-const priceChina = 100;
-const priceSouthAmerica = 250;
-const priceAustralia = 170;
-const priceIndia = 80;
-const priceJamaica = 120;
-
 const countryDelivery = prompt('В какую страну доставка?', '');
+let correctCountryName;
+let price;
+
+
+if (countryDelivery.includes(' ')) {
+    const indexOfSpace = countryDelivery.indexOf(' ');
+    const indexOfSpacePlusOne = indexOfSpace + 1;
+
+    const firstLetterFirsrWord = countryDelivery[0].toUpperCase();
+    const otherLettersFirsrWord = countryDelivery.substr(1, indexOfSpace).toLowerCase();
+    const firstWordOrCountry = firstLetterFirsrWord + otherLettersFirsrWord;
+
+    const firstLetterSecondWord = countryDelivery[indexOfSpacePlusOne].toUpperCase();
+    const otherLettersSecondWord = countryDelivery.substr(indexOfSpacePlusOne + 1).toLowerCase();
+    const secondWordOfCountry = firstLetterSecondWord + otherLettersSecondWord;
+
+    correctCountryName = firstWordOrCountry + secondWordOfCountry;
+
+} else {
+    correctCountryName = countryDelivery[0].toUpperCase() + countryDelivery.substr(1).toLowerCase();
+}ж
+
+
 
 if (countryDelivery === null) {
-    console.log('Очень жаль. Обращайтесь к нам еще');
-} else if (countryDelivery.trim() === '') {
-    console.log('Ошибка ввода. Не указана страна доставки');
-} else {
-    switch (countryDelivery.toLowerCase()) {
-        case 'китай':
-        console.log(`Доставка в ${countryDelivery} будет стоить ${priceChina} кредитов`);
-        break;
+        console.log('Очень жаль. Обращайтесь к нам еще');
+    } else if (countryDelivery.trim() === '') {
+        console.log('Ошибка ввода. Не указана страна доставки');
+    } else {
 
-        case 'южная америка':
-        console.log(`Доставка в ${countryDelivery} будет стоить ${priceSouthAmerica} кредитов`);
-        break;
+        switch (countryDelivery.toLowerCase()) {
+            case 'китай':
+            price = 100;
+            break;
 
-        case 'австралия':
-        console.log(`Доставка в ${countryDelivery} будет стоить ${priceAustralia} кредитов`);
-        break;
+            case 'южная америка':
+            price = 250;
+            break;
 
-        case 'индия':
-        console.log(`Доставка в ${countryDelivery} будет стоить ${priceIndia} кредитов`);
-        break;
+            case 'австралия':
+            price = 170;
+            break;
 
-        case 'ямайка':
-        console.log(`Доставка в ${countryDelivery} будет стоить ${priceJamaica} кредитов`);
-        break;
+            case 'индия':
+            price = 180;
+            break;
 
-        default: 
-        console.log(`В стране ${countryDelivery} доставка не доступна`);
-    }
-}
+            case 'ямайка':
+            price = 120;
+            break;
+
+            default: 
+            console.log(`В стране ${countryDelivery} доставка не доступна`);
+        };
+
+    console.log(`Доставка в ${correctCountryName} будет стоить ${price} кредитов`);
+};

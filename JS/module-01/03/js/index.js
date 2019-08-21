@@ -45,7 +45,7 @@ if (countryDelivery.includes(' ')) {
 
 } else {
     correctCountryName = countryDelivery[0].toUpperCase() + countryDelivery.substr(1).toLowerCase();
-}ж
+};
 
 
 

@@ -25,35 +25,33 @@
 
 
 const countryDelivery = prompt('В какую страну доставка?', '');
-let correctCountryName;
+let message;
 let price;
-
-
-if (countryDelivery.includes(' ')) {
-    const indexOfSpace = countryDelivery.indexOf(' ');
-    const indexOfSpacePlusOne = indexOfSpace + 1;
-
-    const firstLetterFirsrWord = countryDelivery[0].toUpperCase();
-    const otherLettersFirsrWord = countryDelivery.substr(1, indexOfSpace).toLowerCase();
-    const firstWordOrCountry = firstLetterFirsrWord + otherLettersFirsrWord;
-
-    const firstLetterSecondWord = countryDelivery[indexOfSpacePlusOne].toUpperCase();
-    const otherLettersSecondWord = countryDelivery.substr(indexOfSpacePlusOne + 1).toLowerCase();
-    const secondWordOfCountry = firstLetterSecondWord + otherLettersSecondWord;
-
-    correctCountryName = firstWordOrCountry + secondWordOfCountry;
-
-} else {
-    correctCountryName = countryDelivery[0].toUpperCase() + countryDelivery.substr(1).toLowerCase();
-};
-
-
 
 if (countryDelivery === null) {
         console.log('Очень жаль. Обращайтесь к нам еще');
     } else if (countryDelivery.trim() === '') {
         console.log('Ошибка ввода. Не указана страна доставки');
     } else {
+        let correctCountryName;
+
+        if (countryDelivery.includes(' ')) {
+            const indexOfSpace = countryDelivery.indexOf(' ');
+            const indexOfSpacePlusOne = indexOfSpace + 1;
+        
+            const firstLetterFirsrWord = countryDelivery[0].toUpperCase();
+            const otherLettersFirsrWord = countryDelivery.substr(1, indexOfSpace).toLowerCase();
+            const firstWordOrCountry = firstLetterFirsrWord + otherLettersFirsrWord;
+        
+            const firstLetterSecondWord = countryDelivery[indexOfSpacePlusOne].toUpperCase();
+            const otherLettersSecondWord = countryDelivery.substr(indexOfSpacePlusOne + 1).toLowerCase();
+            const secondWordOfCountry = firstLetterSecondWord + otherLettersSecondWord;
+        
+            correctCountryName = firstWordOrCountry + secondWordOfCountry;
+        
+        } else {
+            correctCountryName = countryDelivery[0].toUpperCase() + countryDelivery.substr(1).toLowerCase();
+        };
 
         switch (countryDelivery.toLowerCase()) {
             case 'китай':
@@ -77,8 +75,12 @@ if (countryDelivery === null) {
             break;
 
             default: 
-            console.log(`В стране ${countryDelivery} доставка не доступна`);
+            message = `В стране ${countryDelivery} доставка не доступна`;
         };
 
-    console.log(`Доставка в ${correctCountryName} будет стоить ${price} кредитов`);
+        if(price) {
+            message = `Доставка в ${correctCountryName} будет стоить ${price} кредитов`
+         };
+
+    console.log(message);
 };

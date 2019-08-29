@@ -1,5 +1,6 @@
 import ref from './ref';
 import cardTemplate from '../templates/card.hbs';
+import initialNotes from '../assets/notes.json';
 
 
 const priorityText = (obj) => {

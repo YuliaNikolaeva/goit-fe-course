@@ -28,7 +28,6 @@ export default class Notepad {
 
     promiseSaveNote
     .then((val) => {
-      // return val
       console.log(val)
     })
 
@@ -41,7 +40,8 @@ export default class Notepad {
   deleteNote(id) {
     const promiseDeleteNote = new Promise((resolve, reject) => {
       setTimeout(() => {
-        const noteDelete = this._notes.splice(this.findNoteById(id), 1);
+        this._notes = this._notes.filter( note => note.id !== id);
+        localStorage.setItem('allNotes', JSON.stringify(this._notes));
 
         resolve(this._notes); 
         reject('ERR: note not deleted');
@@ -50,7 +50,6 @@ export default class Notepad {
 
     promiseDeleteNote
     .then((val) => {
-      // return val
       console.log(val)
       
     })
@@ -59,14 +58,6 @@ export default class Notepad {
       console.log(err)
     })
   };
-
-
-
-  // deleteNote(id) {
-  //   const noteDelete = this._notes.splice(this.findNoteById(id), 1);
-  //   // Сохранила в переменную, если в будущем удаленную заметку
-  //   // нужно будет использовать
-  // };
 
   updateNoteContent(id, updatedContent) {
     if(this.findNoteById(id)) {
